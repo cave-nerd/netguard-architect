@@ -1,0 +1,60 @@
+[package]
+name = "netguard-architect"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+name = "netguard_architect_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[[bin]]
+name = "netguard-architect"
+path = "src/main.rs"
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+tauri = { version = "2", features = [] }
+tauri-plugin-shell = "2"
+tauri-plugin-dialog = "2"
+tauri-plugin-fs = "2"
+
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+
+# HTTP client for OPNsense API (rustls for memory-safe TLS)
+reqwest = { version = "0.12", features = ["json", "rustls-tls", "blocking"], default-features = false }
+
+# Async runtime
+tokio = { version = "1", features = ["full"] }
+
+# Nmap XML parsing
+quick-xml = { version = "0.36", features = ["serialize"] }
+
+# Zeroize sensitive data in memory
+zeroize = { version = "1", features = ["derive"] }
+
+# Secure credential storage (Keychain / Credential Manager / Secret Service)
+keyring = { version = "3", features = [] }
+
+# Error handling
+anyhow = "1"
+thiserror = "2"
+
+# Logging
+log = "0.4"
+
+# Packet capture parsing (pure Rust — no libpcap dependency)
+pcap-file = "2"
+etherparse = "0.15"
+
+# UUID v4 for cryptographically-random temp file names
+uuid = { version = "1", features = ["v4"] }
+
+[profile.release]
+opt-level = "s"
+lto = true
+codegen-units = 1
+panic = "abort"
+strip = true

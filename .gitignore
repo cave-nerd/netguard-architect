@@ -1,0 +1,28 @@
+# Rust / Tauri build output
+src-tauri/target/
+
+# Frontend build output
+dist/
+node_modules/
+
+# Environment / secrets
+.env
+.env.*
+*.env
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+*.log
+npm-debug.log*
+
+# Tauri temporary files
+src-tauri/.cargo-lock
