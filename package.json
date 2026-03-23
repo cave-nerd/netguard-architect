@@ -2,6 +2,12 @@
   "name": "netguard-architect",
   "private": true,
   "version": "0.1.0",
+  "license": "GPL-3.0-only",
+  "description": "Desktop security tool that ingests Nmap scans and generates OPNsense firewall rules",
+  "author": {
+    "name": "cave-nerd",
+    "url": "https://github.com/cave-nerd"
+  },
   "type": "module",
   "scripts": {
     "dev": "vite",
