@@ -6,7 +6,7 @@ use zeroize::Zeroizing;
 use crate::opnsense::{client::OPNsenseClient, rules::{FirewallRule, OPNsenseRuleRow}};
 use crate::{AppState, StoredConfig};
 
-const KEYRING_SERVICE: &str = "netguard-architect";
+const KEYRING_SERVICE: &str = "ruleforge";
 /// Hard cap on rules per deploy — prevents bulk DoS against OPNsense.
 const MAX_RULES_PER_DEPLOY: usize = 200;
 

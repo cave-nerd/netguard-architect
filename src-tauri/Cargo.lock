@@ -1888,30 +1888,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "netguard-architect"
-version = "0.1.0"
-dependencies = [
- "anyhow",
- "etherparse",
- "keyring",
- "log",
- "pcap-file",
- "quick-xml 0.36.2",
- "reqwest 0.12.28",
- "serde",
- "serde_json",
- "tauri",
- "tauri-build",
- "tauri-plugin-dialog",
- "tauri-plugin-fs",
- "tauri-plugin-shell",
- "thiserror 2.0.18",
- "tokio",
- "uuid",
- "zeroize",
-]
-
-[[package]]
 name = "new_debug_unreachable"
 version = "1.0.6"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -2864,6 +2840,30 @@ dependencies = [
  "libc",
  "untrusted",
  "windows-sys 0.52.0",
+]
+
+[[package]]
+name = "ruleforge"
+version = "0.1.0"
+dependencies = [
+ "anyhow",
+ "etherparse",
+ "keyring",
+ "log",
+ "pcap-file",
+ "quick-xml 0.36.2",
+ "reqwest 0.12.28",
+ "serde",
+ "serde_json",
+ "tauri",
+ "tauri-build",
+ "tauri-plugin-dialog",
+ "tauri-plugin-fs",
+ "tauri-plugin-shell",
+ "thiserror 2.0.18",
+ "tokio",
+ "uuid",
+ "zeroize",
 ]
 
 [[package]]

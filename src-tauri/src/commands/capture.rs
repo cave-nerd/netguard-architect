@@ -91,7 +91,7 @@ pub async fn run_tshark_on_capture(
     // Use a UUID v4 (cryptographically random) for the filename so it cannot
     // be predicted or guessed. O_EXCL prevents symlink attacks.
     let tmp_path = std::env::temp_dir()
-        .join(format!("netguard_tshark_{}.json", uuid::Uuid::new_v4()));
+        .join(format!("ruleforge_tshark_{}.json", uuid::Uuid::new_v4()));
     std::fs::OpenOptions::new()
         .write(true)
         .create_new(true) // O_EXCL — fails if the path already exists

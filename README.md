@@ -1,11 +1,11 @@
 <div align="center">
 
-# NetGuard Architect
+# RuleForge
 
 **Turn Nmap scans into OPNsense firewall rules — in seconds.**
 
-[![Release](https://img.shields.io/github/v/release/cave-nerd/netguard-architect?style=flat-square&color=6366f1)](https://github.com/cave-nerd/netguard-architect/releases/latest)
-[![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20Linux-blue?style=flat-square&color=0ea5e9)](https://github.com/cave-nerd/netguard-architect/releases/latest)
+[![Release](https://img.shields.io/github/v/release/cave-nerd/ruleforge?style=flat-square&color=6366f1)](https://github.com/cave-nerd/ruleforge/releases/latest)
+[![Platform](https://img.shields.io/badge/platform-Linux%20%7C%20Windows-blue?style=flat-square&color=0ea5e9)](https://github.com/cave-nerd/ruleforge/releases/latest)
 [![License: GPL v3](https://img.shields.io/badge/license-GPLv3-10b981?style=flat-square)](LICENSE)
 [![Built with Tauri](https://img.shields.io/badge/built%20with-Tauri%202.0-ffc131?style=flat-square&logo=tauri)](https://tauri.app/)
 
@@ -43,21 +43,21 @@
 
 | Platform | File |
 |----------|------|
-| 🐧 Linux | `NetGuard.Architect_0.1.0_amd64.AppImage` |
-| 🪟 Windows | `netguard-architect.exe` |
+| 🐧 Linux | `RuleForge_0.1.0_amd64.AppImage` |
+| 🪟 Windows | `ruleforge.exe` |
 
-**[→ Latest Release](https://github.com/cave-nerd/netguard-architect/releases/latest)**
+**[→ Latest Release](https://github.com/cave-nerd/ruleforge/releases/latest)**
 
 ### Linux
 ```bash
-chmod +x 'NetGuard Architect_0.1.0_amd64.AppImage'
-./'NetGuard Architect_0.1.0_amd64.AppImage'
+chmod +x 'RuleForge_0.1.0_amd64.AppImage'
+./'RuleForge_0.1.0_amd64.AppImage'
 ```
 
 > Requires WebKit2GTK: `sudo apt install libwebkit2gtk-4.1-0`
 
 ### Windows
-Run `netguard-architect.exe` directly — no installer needed.
+Run `ruleforge.exe` directly — no installer needed.
 
 ---
 
@@ -78,7 +78,7 @@ Run `netguard-architect.exe` directly — no installer needed.
 
 1. In your OPNsense web UI go to **System > Access > Users** and create a dedicated API user with firewall privileges
 2. Generate an API key and secret for that user
-3. In NetGuard Architect open **Settings** and enter your OPNsense hostname/IP, API key, and API secret
+3. In RuleForge open **Settings** and enter your OPNsense hostname/IP, API key, and API secret
 4. Click **Test Connection** — the detected firmware version confirms the connection
 
 > Credentials are stored in your OS keyring and loaded at startup. They are never written to disk or sent back to the UI after the initial save.
@@ -87,7 +87,7 @@ Run `netguard-architect.exe` directly — no installer needed.
 
 ## PCAP / Wireshark Files
 
-NetGuard Architect parses `.pcap` and `.pcapng` files in addition to Nmap XML — useful when you have an existing traffic capture and want to derive rules from observed connections rather than active scanning.
+RuleForge parses `.pcap` and `.pcapng` files in addition to Nmap XML — useful when you have an existing traffic capture and want to derive rules from observed connections rather than active scanning.
 
 > **Note:** If your PCAP fails to load, uncheck **Use Rich File Format** in the import dialog. Wireshark's extended format includes metadata blocks the parser does not currently support; standard pcap and plain pcapng files load without issue.
 

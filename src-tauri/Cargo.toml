@@ -1,15 +1,15 @@
 [package]
-name = "netguard-architect"
+name = "ruleforge"
 version = "0.1.0"
 edition = "2021"
 license = "GPL-3.0-only"
 
 [lib]
-name = "netguard_architect_lib"
+name = "ruleforge_lib"
 crate-type = ["staticlib", "cdylib", "rlib"]
 
 [[bin]]
-name = "netguard-architect"
+name = "ruleforge"
 path = "src/main.rs"
 
 [build-dependencies]

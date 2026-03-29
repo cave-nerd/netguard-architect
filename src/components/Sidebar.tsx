@@ -46,8 +46,8 @@ export default function Sidebar({
       <div className="flex items-center gap-2.5 px-5 py-5 border-b border-surface-600">
         <Shield size={22} className="text-brand-400" />
         <span className="font-semibold text-sm text-white tracking-wide">
-          NetGuard
-          <span className="text-brand-400"> Architect</span>
+          Rule
+          <span className="text-brand-400">Forge</span>
         </span>
       </div>
 
